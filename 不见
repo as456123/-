@@ -65,7 +65,7 @@ switch(dir)
 			break;	
 	}
 }
-int main()
+int  main()
 {
 	char dir;
 	system("color f9");
@@ -83,7 +83,7 @@ int main()
 		Move(dir);
 		if(map[curY][curX]=='E')
 		{
-			printf("恭喜，成功通过！,用时%d秒",time(0)-s);
+			printf("哈哈，你通关了！,总共花费%d秒",time(0)-s);
 			break; 
 		} 
 	}
