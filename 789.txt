@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define M 100
+int Find(char *a,char *find);                         
+int main()
+{
+    int i,j,k;
+    char a[M],find[M];
+    scanf("%[^\n]",a);                                
+    printf("请输入需要计算数目的单词:");
+    scanf("%s",find);
+    printf("%s出现了%d次\n",find,Find(a,find));        
+    system("pause");
+    return 0;
+}
+
+
+int Find(char *a,char *find)
+{
+ int m=0;
+ char *p=find;
+ while(*a)                                      
+ {
+    if(*a==*p)                                   
+    {
+        p++;
+        if(*p==NULL&&*(a+1)==' '||*(a+1)==NULL)  
+        {
+          m++;
+          p=find;                                
+        }
+    }
+    else
+    {
+        p=find;
+    }
+  a++;
+ }
+ return m;
+}
